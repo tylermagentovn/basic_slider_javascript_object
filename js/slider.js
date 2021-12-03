@@ -16,10 +16,24 @@ var Slider = function (params) {
             self.next();
         },false);
         
-       
+        
         document.getElementById(this.prevEl).addEventListener('click',function(e){
             self.prev();
         },false);
+
+        var drag = false;
+        this.element.addEventListener('dragstart',function(e){
+            drag = e.screenX;
+        });
+        
+        this.element.addEventListener('dragend',function(e){
+            if(e.screenX > drag){
+                self.next();
+            }
+            else{
+                self.prev();
+            }
+        });
 
         if(this.autoplay){
             setInterval(function(){ self.next() }, self.autoplay);
