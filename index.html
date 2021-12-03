@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Slider Image with Object Javascript</title>
+    <script src="js/slider.js"></script>
+    <style>
+        .slider-item {
+            display: none;
+        }
+
+        .slider-item.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slider">
+        <div class="slider-item">
+            <img src="https://socialsizes.io/static/facebook-cover-photo-size-eb6495646be79eea62423b216ac0b36b.jpg" alt="" srcset="" />
+        </div>
+        <div class="slider-item">
+            <img src="https://wcrates.files.wordpress.com/2015/03/best-facebook-cover-for-facebook.jpg" alt="" srcset="" />
+        </div>
+        <div class="slider-item">
+            <img src="http://2.bp.blogspot.com/-mIBnH7Yu8t8/T44dEX94J2I/AAAAAAAAEXE/Vzn-4Obtjis/s1600/Love+Facebook+Covers.png" alt="" srcset="" />
+        </div>
+    </div>
+    <div class="slider-nav">
+        <button class="slider-nav prev" id="button-prev">Prev</button>
+        <button class="slider-nav next" id="button-next">Next</button>
+    </div>
+    <script>
+        var slider = new Slider({ el: 'slider', autoplay: 3000 });
+    </script>
+</body>
+</html>
